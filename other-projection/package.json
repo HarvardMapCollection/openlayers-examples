@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Boilerplate template for a web map.",
   "source": "src/index.html",
+  "repository": "https://harvardmapcollection.github.io/openlayers-examples/other-projection/dist/",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --public-url /"
+    "build": "parcel build src/index.html --public-url '.'"
   },
   "author": "Belle Lipton",
   "license": "ISC",
