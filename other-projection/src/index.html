@@ -6,12 +6,31 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <h1 id="title">Susquehanna and Delaware Rivers headwaters, New York, 1790 (Raster Image)</h1>
+    <h1 id="title">Custom Projections in HGL Tile Layers</h1>
     <div id="map" class="map"></div>
+    <h2>Projections</h2>
+    <p>Many web map tile services via the Harvard Geospatial Library (HGL) exist in projections other than EPSG:4326 (Mercator) or EPSG:3857 (Web Mercator).</p>
+    <p>In these instances, to use these services in a webmap, you will need to specify the projection in your code.</p>
+    <p>JavaScript mapping library <a target="_blank" href="https://openlayers.org/">OpenLayers</a> makes this task more straightforward than other libraries, such as Leaflet.</p>
+    <p>In this example, we add a <a target="_blank:" href="https://hgl.harvard.edu/catalog/harvard-g3801-g46-1790-d4-1849">1790 map of New York</a> from HGL to a web map using OpenLayers. This tile service uses EPSG:32618, or UTM Zone 18.</p>
+    <p>You can find the projection for any raster tileset in HGL by visiting the object's metadata record.</p>
+    <h2>Follow along</h2>
     <p>Download this code from the Harvard Map Collection <a target="_blank" href="">GitHub.</a></p>
+    <h2>Adding a layer with OpenLayers</h2>
     <p>
       <pre>
       <code>
+        //initialize the map
+        const map = new Map({
+          layers: layers,
+          target: 'map',
+          view: new View({
+            center: [-8313419.924689821,5270000.419856723],
+            zoom: 11
+          })
+        });
+        
+
         //define the layers, including the basemap and a HMC HGL map
         const layers = [
           new TileLayer({

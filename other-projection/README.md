@@ -10,6 +10,11 @@ To make changes, edit the html, css, and javascript versions of files found in t
 
 Files in the **dist** folder have strange names, but those files are the distribution version of your website, once you're ready to host it somewhere.
 
+## Preview
+
+You can preview the project at this URL:
+https://harvardmapcollection.github.io/openlayers-examples/other-projection/dist/
+
 ## Helpful documentation
 
 [Package Management Basics](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
