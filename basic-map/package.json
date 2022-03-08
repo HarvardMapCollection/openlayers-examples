@@ -1,0 +1,15 @@
+{
+  "name": "ol-boiler",
+  "version": "1.0.0",
+  "description": "Boilerplate template for a web map.",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Belle Lipton",
+  "license": "ISC",
+  "dependencies": {
+    "ol": "^6.12.0"
+  }
+}
