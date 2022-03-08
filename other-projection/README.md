@@ -1,7 +1,5 @@
 # OpenLayers boilerplate template
-This is a boilerplate template for building an OpenLayers web app using a map from the Harvard Geospatial Library that is not in an EPSG:4326 projection.
-
-Many maps in HGL have been published in non-mercator projections. You can use the HGL record metadata to find the correct projection.
+This is a boilerplate template for building an OpenLayers web app. It contains a directory setup and displays a basic web map. 
 
 ## Get started
 To download the dependencies this project needs, open a new terminal at this folder and run `npm install`.
