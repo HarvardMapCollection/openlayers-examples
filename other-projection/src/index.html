@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>OL boiler</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 id="title">Susquehanna and Delaware Rivers headwaters, New York, 1790 (Raster Image)</h1>
+    <div id="map" class="map"></div>
+    <p>Download this code from the Harvard Map Collection <a target="_blank" href="">GitHub.</a></p>
+    <p>
+      <pre>
+      <code>
+        //define the layers, including the basemap and a HMC HGL map
+        const layers = [
+          new TileLayer({
+            source: new OSM()
+          }),
+          new TileLayer({
+            source: new TileWMS({
+              projection: 'EPSG:32618',
+              url: 'https://geodata-proxy.lib.harvard.edu/geoserver/proxy/requestfile/wms',
+              attributions:
+                'Harvard Map Collection',
+              params: {
+                'LAYERS': 'mapimages_public:G3801_G46_1790_D4_1849',
+              },
+            }),
+          }),
+        ];
+
+      </code>
+    </pre>
+    </p>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
